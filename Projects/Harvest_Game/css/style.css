@@ -16,3 +16,16 @@
 .square.weeds {
   background-color: darkgreen;
 }
+
+.plant {
+  background: url(../images/tempPlant.png);
+  background-size: cover;
+}
+
+.one {
+  background-color: lightblue;
+}
+
+.two {
+  background-color: lightcoral;
+}
