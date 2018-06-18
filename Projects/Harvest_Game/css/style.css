@@ -11,7 +11,6 @@
   min-height: 50px;
   min-width: 50px;
   display: inline-block;
-  /* background-image: url(../images/8.png); */
   opacity: 0.9;
   border: 1px solid grey;
   background-size: cover;
@@ -19,18 +18,25 @@
 
 .square.weeds {
   background-image: url(../images/6.png);
-  background-size: cover;
 }
 
 .plant {
-  background: url(../images/1.png);
+  background-image: url(../images/1.png);
   background-size: cover;
 }
 
 .one {
-  background-color: lightblue;
+  background-color: rgba(0,128,255,0.3);
+}
+.one-planted {
+  background-image: url(../images/12.png);
+  background-color: rgba(0,128,255,0.8);
 }
 
+.two-planted {
+  background-image: url(../images/12.png);
+  background-color: rgba(255,51,51,0.8);
+}
 .two {
-  background-color: lightcoral;
+  background-color: rgba(255,51,51,0.3);
 }
