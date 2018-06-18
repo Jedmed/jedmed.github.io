@@ -3,7 +3,7 @@ $(() => {
   const $container = $('.container');
   const $sidebar = $('.sidebar')
   let player = ['one', 'two'];
-  const $planted = $('.one');
+  const $currentPlayer = $('.info > h2')
   const $button = $('button');
 
   // Event Handlers
@@ -11,6 +11,7 @@ $(() => {
   const rotatePlayer = () => {
     tempPlayer = player.shift(1);
     player.push(tempPlayer);
+    $currentPlayer.text('Player ' + player[0]);
   }
 
   // check if player is selecting a weed and if so remove it, rotate player
@@ -49,6 +50,7 @@ $(() => {
       $container.children().removeClass('water');
       $square.unbind('click');
       $square.on('click', plant);
+      rotatePlayer();
     });
   }
 

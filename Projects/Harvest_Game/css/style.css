@@ -7,6 +7,18 @@
   opacity: 0.9;
 }
 
+.sidebar {
+  position: absolute;
+  left: 10%;
+  top: 10%;
+}
+
+.sidebar h2 {
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  ;
+}
+
 .square {
   min-height: 50px;
   min-width: 50px;
@@ -15,6 +27,11 @@
   border: 1px solid grey;
   background-size: cover;
   cursor: url(../images/2.png), auto;
+}
+
+.square:hover {
+  outline: 2px solid gold;
+  outline-offset: -4px;
 }
 
 .square.weeds {
@@ -28,9 +45,11 @@
   background-size: cover;
 }
 
-.water:hover {
+.water:hover, .water:hover+.water, .water:hover+.water+.water+.water+.water+.water+.water+.water+.water+.water+.water+.water+.water, .water:hover+.water+.water+.water+.water+.water+.water+.water+.water+.water+.water+.water+.water+.water {
   cursor: url(../images/3.png), auto;
   background-color: rgba(0, 0, 255, 0.8);
+  outline: 2px solid gold;
+  outline-offset: -4px;
 }
 
 .one {
