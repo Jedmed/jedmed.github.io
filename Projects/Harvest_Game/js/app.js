@@ -2,6 +2,7 @@ $(() => {
   // Get Elements
   const $container = $('.container');
   let player = ['one', 'two'];
+  const fieldBg = ['images/8.png', 'images/9.png', 'images/10.png']
 
   // Event Handlers
   // Rotate players per action
@@ -33,6 +34,7 @@ $(() => {
     for (let i = 0; i < 96; i++) {
       const $div = $('<div>');
       $div.addClass('square');
+      // $div.css('background-image', 'url(' + fieldBg[Math.floor(Math.random() * fieldBg.length)] + ')');
       $container.append($div);
     }
   }

@@ -3,22 +3,27 @@
   grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
   margin: auto;
   max-width: 600px;
+  background-image: url(../images/8.png);
+  opacity: 0.9;
 }
 
 .square {
   min-height: 50px;
   min-width: 50px;
   display: inline-block;
-  background-color: ivory;
+  /* background-image: url(../images/8.png); */
+  opacity: 0.9;
   border: 1px solid grey;
+  background-size: cover;
 }
 
 .square.weeds {
-  background-color: darkgreen;
+  background-image: url(../images/6.png);
+  background-size: cover;
 }
 
 .plant {
-  background: url(../images/tempPlant.png);
+  background: url(../images/1.png);
   background-size: cover;
 }
 
