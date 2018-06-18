@@ -14,10 +14,13 @@
   opacity: 0.9;
   border: 1px solid grey;
   background-size: cover;
+  cursor: url(../images/2.png), auto;
 }
 
 .square.weeds {
   background-image: url(../images/6.png);
+  cursor: url(../images/4.png), auto;
+  background-color: rgba(102, 51, 0, 0.8);
 }
 
 .plant {
@@ -25,18 +28,25 @@
   background-size: cover;
 }
 
-.one {
-  background-color: rgba(0,128,255,0.3);
+.water:hover {
+  cursor: url(../images/3.png), auto;
+  background-color: rgba(0, 0, 255, 0.8);
 }
+
+.one {
+  background-color: rgba(0, 128, 255, 0.3);
+}
+
 .one-planted {
   background-image: url(../images/12.png);
-  background-color: rgba(0,128,255,0.8);
+  background-color: rgba(0, 128, 255, 0.8);
 }
 
 .two-planted {
   background-image: url(../images/12.png);
-  background-color: rgba(255,51,51,0.8);
+  background-color: rgba(255, 51, 51, 0.8);
 }
+
 .two {
-  background-color: rgba(255,51,51,0.3);
+  background-color: rgba(255, 51, 51, 0.3);
 }
