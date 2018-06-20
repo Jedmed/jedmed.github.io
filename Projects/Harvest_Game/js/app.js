@@ -8,7 +8,7 @@ $(() => {
   const $button = $('button');
 
   // Event Handlers
-  // Rotate players per action
+  // Check players' current score
   const pointCheck = () => {
     const win = 10;
     switch (true) {
@@ -28,7 +28,7 @@ $(() => {
         break;
     }
   }
-
+  // Rotate players per action
   const rotatePlayer = () => {
     tempPlayer = player.shift(1);
     player.push(tempPlayer);
@@ -87,6 +87,8 @@ $(() => {
 
   const deselectWaterPlant = () => {
     $container.children().removeClass('water');
+    $button.css('background-color', 'rgba(0, 0, 255, 0.8)');
+    $button.text('Water Plants');
     $square.unbind('click');
     $square.on('click', plant);
     $button.on('click', waterPlant);
@@ -95,6 +97,8 @@ $(() => {
   const waterPlant = () => {
     $square.unbind('click');
     $container.children().addClass('water');
+    $button.css('background-color', 'red');
+    $button.text('Cancel Water');
     $button.on('click', deselectWaterPlant);
     // Set up watering functionality
     $square.on('click', (event) => {
