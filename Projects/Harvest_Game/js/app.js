@@ -1,8 +1,9 @@
 $(() => {
   // Get Elements
   const $container = $('.container');
-  const $sidebar = $('.sidebar')
+  const $sidebar = $('.sidebar');
   let player = ['one', 'two'];
+  let playerPoint = [0, 0];
   const $currentPlayer = $('.info > h2')
   const $button = $('button');
 
@@ -28,29 +29,47 @@ $(() => {
       $(event.target).addClass('plant');
       $(event.target).addClass(player[0]);
       rotatePlayer();
-      $('.plant').on('click', (event) => {
-        if ($(event.target).hasClass('one') && player[0] === 'one') {
-          $(event.target).removeClass('one plant').addClass('one-planted');
-          rotatePlayer();
-        } else if ($(event.target).hasClass('two') && player[0] === 'two') {
-          $(event.target).removeClass('two plant').addClass('two-planted');
-          rotatePlayer();
-        }
-      })
     }
     removeWeeds(event);
+  }
+
+  // get position of event
+  const getIndex = (e) => {
+    let parent = e.parentElement;
+    for (let i = 0; i < parent.children.length; i++) {
+      if (parent.children[i].isEqualNode(e)) {
+        return i;
+      }
+    }
+  }
+
+  const growPlant = (event) => {
+    const multiTarget = [
+      $square.eq(getIndex(event.target)), $square.eq(getIndex((event.target)) + 1),
+      $square.eq(getIndex((event.target)) + 12),
+      $square.eq(getIndex((event.target)) + 13)
+    ];
+
+    for (let i = 0; i < multiTarget.length; i++) {
+      if (multiTarget[i].hasClass('one')) {
+        multiTarget[i].removeClass('one plant').addClass('one-planted');
+      } else if (multiTarget[i].hasClass('two')) {
+        multiTarget[i].removeClass('two plant').addClass('two-planted');
+      }
+    }
+    rotatePlayer();
   }
 
   const waterPlant = () => {
     $square.unbind('click');
     $container.children().addClass('water');
+    // Set up watering functionality
     $square.on('click', (event) => {
-      console.log($(event.target).next());
+      growPlant(event);
       //rebind key
       $container.children().removeClass('water');
       $square.unbind('click');
       $square.on('click', plant);
-      rotatePlayer();
     });
   }
 
