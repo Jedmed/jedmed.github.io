@@ -7,6 +7,15 @@
   opacity: 0.9;
 }
 
+.win {
+  display: none;
+}
+
+.win h1 {
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+}
+
 .sidebar {
   /* position: absolute;
   left: 10%;
@@ -16,7 +25,6 @@
 .sidebar h2 {
   text-transform: uppercase;
   font-family: 'Open Sans', sans-serif;
-  ;
 }
 
 .square {
