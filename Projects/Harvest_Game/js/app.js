@@ -27,16 +27,6 @@ $(() => {
         $('.win h1').text("It's a Draw!");
         break;
     }
-    // if (playerPoints[0] >= 3) {
-    //   $('.win').css('display', 'block');
-    //   $('.win strong').text('Player One')
-    // } else if (playerPoints[1] >= 3) {
-    //   $('.win').css('display', 'block');
-    //   $('.win strong').text('Player Two')
-    // } else if (playerPoints[0] && playerPoints[1] >= 3) {
-    //   $('.win').css('display', 'block');
-    //   $('.win').text("It's a Draw!");
-    // }
   }
 
   const rotatePlayer = () => {
