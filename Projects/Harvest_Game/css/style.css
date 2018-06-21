@@ -5,6 +5,7 @@
 
 body {
   margin: 0;
+  overflow: hidden;
 }
 
 .background-image {
@@ -185,6 +186,33 @@ h1.title {
   color: rgba(255, 51, 51, 1);
 }
 
+.walking-chicken {
+  background: url(../images/walkingchicken.gif) no-repeat;
+  background-size: cover;
+  position: absolute;
+  animation: walkingChicken 60s linear;
+  left: -100px;
+  bottom: 0;
+  width: 100px;
+  height: 120px;
+}
+
+
+@keyframes walkingChicken {
+  0% {
+    left: -100px;
+  }
+  20% {
+    left: -100px;
+  }
+  50% {
+    left: 50%;
+  }
+  100% {
+    left: calc(100% + 100px);
+  }
+}
+
 /***************************
 MODAL BOX css
 *************************/
@@ -229,7 +257,7 @@ MODAL BOX css
   cursor: pointer;
 }
 
-.odal-buttons:hover {
+.modal-buttons:hover {
   outline: 2px solid white;
   outline-offset: -4px;
   color: white;
@@ -240,8 +268,9 @@ MODAL BOX css
 }
 
 @media screen and (max-width: 900px) {
-  body {
+  html, body {
     overflow: hidden;
+    position: relative;
   }
   .content {
     flex-direction: column-reverse;
@@ -259,6 +288,10 @@ MODAL BOX css
   }
   .extras {
     display: none;
+  }
+  .walking-chicken {
+    width: 65px;
+    height: 80px;
   }
 }
 

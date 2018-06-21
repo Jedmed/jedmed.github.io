@@ -11,7 +11,7 @@ $(() => {
 
   // Event Handlers
 
-  // open/close modal box
+  // open/close/generate modal box
   const openModal = () => {
     $modal.css('display', 'flex');
   }
