@@ -12,7 +12,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: -2;
   height: 100%;
   width: 100%;
   background: url(../images/background-image.jpg) no-repeat;
@@ -41,14 +41,6 @@ body {
   -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.4);
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.4);
-}
-
-h1.title {
-  text-transform: uppercase;
-  font-family: 'myFont', sans-serif;
-  text-align: center;
-  margin-top: 0;
-  color: gold;
 }
 
 .sidebar {
@@ -197,7 +189,6 @@ h1.title {
   height: 120px;
 }
 
-
 @keyframes walkingChicken {
   0% {
     left: -100px;
@@ -210,6 +201,73 @@ h1.title {
   }
   100% {
     left: calc(100% + 100px);
+  }
+}
+
+/*********************
+Title animation
+*********************/
+
+*, *:before, *:after {
+  position: relative;
+}
+
+.title-mobile h1 {
+  text-transform: uppercase;
+  font-family: 'myFont', sans-serif;
+  text-align: center;
+  font-size: 3em;
+  color: gold;
+  text-shadow: .03em .03em 0 hsla(230, 40%, 50%, 1);
+  margin: 0;
+}
+
+.title-mobile {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: -10px;
+  right: 0;
+}
+
+.title-main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.title-main h1 {
+  text-transform: uppercase;
+  margin: 0 10px;
+  display: inline-block;
+  color: gold;
+  font-family: 'myFont', serif;
+  font-size: 4.5em;
+  text-shadow: .03em .03em 0 hsla(230, 40%, 50%, 1);
+}
+
+.title-main h1:after {
+  content: attr(data-shadow);
+  position: absolute;
+  top: .06em;
+  left: .06em;
+  z-index: -1;
+  text-shadow: none;
+  background-image: linear-gradient( 45deg, rgba(102, 51, 0, 0.8) 45%, hsla(48, 20%, 90%, 1) 45%, hsla(48, 20%, 90%, 1) 55%, transparent 0);
+  background-size: .05em .05em;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shad-anim 15s linear infinite;
+}
+
+@keyframes shad-anim {
+  0% {
+    background-position: 0 0
+  }
+  0% {
+    background-position: 100% -100%
   }
 }
 
@@ -276,15 +334,23 @@ MODAL BOX css
     flex-direction: column-reverse;
   }
   .sidebar {
-    min-width: 200px;
+    display: flex;
+    min-width: 60%;
     padding: 20px;
     margin: 20px 0 0 0;
   }
   .sidebar .info {
     margin: 0;
   }
-  .sidebar h1 {
+  .water-button {
+    margin: 0;
+    margin-left: 40px;
+  }
+  .title-main {
     display: none;
+  }
+  .title-mobile {
+    display: block;
   }
   .extras {
     display: none;
@@ -299,6 +365,12 @@ MODAL BOX css
   .square {
     min-height: 30px;
     min-width: 30px;
+  }
+  .title-mobile {
+    top: 10%;
+  }
+  .sidebar {
+    width: 80%;
   }
   .container {
     width: 360px;
