@@ -12,8 +12,8 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   background: url(../images/background-image.jpg) no-repeat;
   background-size: cover;
   -webkit-filter: blur(2px);
@@ -240,7 +240,7 @@ MODAL BOX css
 }
 
 @media screen and (max-width: 900px) {
-  html {
+  body {
     overflow: hidden;
   }
   .content {
@@ -257,19 +257,22 @@ MODAL BOX css
   .sidebar h1 {
     display: none;
   }
+  .extras {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 650px) {
   .square {
-    min-height: 35px;
-    min-width: 35px;
+    min-height: 30px;
+    min-width: 30px;
   }
   .container {
-    width: 420px;
-    grid-template-columns: repeat(auto-fit, minmax(35px, 1fr));
+    width: 360px;
+    grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
   }
   #modal-textbox {
-    width: 350px;
+    width: 300px;
   }
   h1 {
     font-size: 20px;
