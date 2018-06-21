@@ -21,15 +21,31 @@
     <div id="modal-textbox">
       <h1>Congratulations! <br /><strong></strong> has won!</h1>
       <div id="modal-footer">
-        <button class="modal-buttons" id="close">Restart Game</button>
+        <button class="modal-buttons" id="restart">Restart Game</button>
+      </div>
+    </div>
+  </div>
+  <div class="how-to-play" id="modal">
+    <div id="modal-textbox">
+      <h1>How to Play</h1>
+      <p>Two players compete to harvest their crops on the same field. Each harvested crop is worth 1 point. <strong>The first player to 10 points wins!</strong></p>
+      <h1>What Can I Do?</h1>
+      <p>Each player may only take one action on their turn:</p>
+      <ul>
+        <li><strong>Plant a Seed:</strong>Click on an empty field to plant a seed</li>
+        <li><strong>Remove Weeds:</strong>A seed can not be planted on an area with weeds, click on a weed to remove it</li>
+        <li><strong>Water Plants:</strong>A seed needs water in order to grow into a harvestable plant, select the WATER PLANT and splash your water over a 4-block area in order for the plants to grow! You immediately get points for any watered seed <strong>WARNING! Watering seeds will grow plants for both players!</strong></li>
+      </ul>
+      <div id="modal-footer">
+        <button class="modal-buttons" id="close">Close</button>
       </div>
     </div>
   </div>
   <div class="content">
     <div class="sidebar">
       <div class="extras">
-        <button>How to Play</button>
-        <button>Restart</button>
+        <button class="how-to-play">How to Play</button>
+        <button id="restart">Restart</button>
       </div>
       <table class="info">
         <tr class="player">

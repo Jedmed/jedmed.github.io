@@ -5,19 +5,27 @@ $(() => {
   let player = ['one', 'two'];
   let playerPoints = [0, 0];
   const $currentPlayer = $('.player > td')
+  const $htpButton = $('button.how-to-play')
   const $button = $('.water-button');
+  const $winModal = $('#modal.win');
+  const $htpModal = $('#modal.how-to-play')
   const $modal = $('#modal');
-  const $closeBtn = $('#close');
+  const $closeBtn = $('button#close');
+  const $restart = $('button#restart');
 
   // Event Handlers
+  // open and close modal box
+  const openHTPModal = () => {
+    $htpModal.css('display', 'flex');
+  }
 
-  // open/close/generate modal box
   const openModal = () => {
-    $modal.css('display', 'flex');
+    $winModal.css('display', 'flex');
   }
 
   const closeModal = () => {
     $modal.css('display', 'none');
+    $htpModal.css('display', 'none')
   }
 
   // Check players' current score and determine a winner
@@ -99,6 +107,7 @@ $(() => {
     rotatePlayer();
   }
 
+  // deactivate watering plant functionality
   const deselectWaterPlant = () => {
     $container.children().removeClass('water');
     $button.css('background-color', 'rgba(0, 128, 255, 1)');
@@ -108,6 +117,7 @@ $(() => {
     $button.on('click', waterPlant);
   }
 
+  // activate watering plant functionality
   const waterPlant = () => {
     $square.unbind('click');
     $container.children().addClass('water');
@@ -138,12 +148,19 @@ $(() => {
     }
   }
 
+  // Restart game by reloading page
+  const restart = () => {
+    location.reload();
+  }
+
   makeField();
   generateWeeds();
   const $square = $('.square');
 
   // Event Listeners
+  $htpButton.on('click', openHTPModal);
   $square.on('click', plant);
   $button.on('click', waterPlant);
   $closeBtn.on('click', closeModal);
+  $restart.on('click', restart);
 });

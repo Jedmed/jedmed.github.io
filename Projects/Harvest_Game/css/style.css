@@ -289,6 +289,11 @@ MODAL BOX css
   overflow: hidden;
 }
 
+.how-to-play>#modal-textbox {
+  width: 700px;
+  padding: 1% 2%;
+}
+
 #modal-textbox {
   text-transform: uppercase;
   background-color: rgba(102, 51, 0, 0.9);
@@ -313,6 +318,7 @@ MODAL BOX css
   background-color: gold;
   font-family: 'myFont';
   cursor: pointer;
+  color: rgba(102, 51, 0, 1);
 }
 
 .modal-buttons:hover {
@@ -324,6 +330,25 @@ MODAL BOX css
 #modal-footer {
   text-align: center;
 }
+
+p strong, li strong {
+  color: gold;
+  margin-right: 10px;
+}
+
+li, ul, p {
+  text-align: left;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/************************
+Responsive Design
+***********************/
 
 @media screen and (max-width: 900px) {
   html, body {
