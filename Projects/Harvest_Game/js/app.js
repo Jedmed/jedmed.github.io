@@ -4,7 +4,7 @@ $(() => {
   const $sidebar = $('.sidebar');
   let player = ['one', 'two'];
   let playerPoints = [0, 0];
-  const $currentPlayer = $('.info > h2')
+  const $currentPlayer = $('.player > td')
   const $button = $('button');
 
   // Event Handlers
@@ -32,7 +32,7 @@ $(() => {
   const rotatePlayer = () => {
     tempPlayer = player.shift(1);
     player.push(tempPlayer);
-    $currentPlayer.text('Player ' + player[0]);
+    $currentPlayer.text(player[0]).removeClass(player[1]).addClass(player[0]);
   }
 
   // check if player is selecting a weed and if so remove it, rotate player
@@ -45,7 +45,7 @@ $(() => {
 
   // check if players can plant a seed, and if they can do so, rotate player
   const plant = (event) => {
-    if (!($(event.target).hasClass('plant')) && !($(event.target).hasClass('weeds'))) {
+    if (!($(event.target).hasClass('plant')) && !($(event.target).hasClass('weeds')) && !($(event.target).hasClass('one-planted')) && !($(event.target).hasClass('two-planted'))) {
       $(event.target).addClass('plant');
       $(event.target).addClass(player[0]);
       rotatePlayer();
@@ -87,7 +87,7 @@ $(() => {
 
   const deselectWaterPlant = () => {
     $container.children().removeClass('water');
-    $button.css('background-color', 'rgba(0, 0, 255, 0.8)');
+    $button.css('background-color', 'rgba(0, 128, 255, 1)');
     $button.text('Water Plants');
     $square.unbind('click');
     $square.on('click', plant);

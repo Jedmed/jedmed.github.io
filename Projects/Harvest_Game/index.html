@@ -5,6 +5,12 @@
   <meta charset="utf-8">
   <title>Harvest Game</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+  @font-face {
+    font-family: "myFont";
+    src: url("css/CW_BITMP.ttf");
+  }
+  </style>
 </head>
 
 <body>
@@ -15,12 +21,24 @@
   <div class="content">
     <div class="sidebar">
       <h1 class="title">Harvest Game</h1>
-      <div class="info">
-        <h2>Player One</h2>
-        <p class="play-1">0</p>
-        <p class="play-2">0</p>
-      </div>
-      <button>Water Plants</button>
+      <table class="info">
+        <tr class="player">
+          <th>Current Player:</th>
+          <td class="one">One</td>
+        </tr>
+        <tr>
+          <th>Player Score:</th>
+        </tr>
+        <tr class="score">
+          <td class="one">One</td>
+          <td class="play-1">0</td>
+        </tr>
+        <tr class="score">
+          <td class="two">Two</td>
+          <td class="play-2">0</td>
+        </tr>
+      </table>
+      <button class="water-button">Water Plants</button>
     </div>
     <div class="container"></div>
   </div>
