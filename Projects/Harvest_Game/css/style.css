@@ -103,8 +103,12 @@ h1.title {
   color: gold;
 }
 
+.extras {
+  display: flex;
+  justify-content: space-around;
+}
+
 .extras button {
-  display: inline-block;
   margin: 0 5px;
   padding: 10px 20px 15px;
   border: none;
@@ -235,15 +239,12 @@ MODAL BOX css
   text-align: center;
 }
 
-@media only screen and (max-width: 900px) {
+@media screen and (max-width: 900px) {
   html {
     overflow: hidden;
   }
   .content {
     flex-direction: column-reverse;
-  }
-  .extras {
-    display: none;
   }
   .sidebar {
     min-width: 200px;
@@ -255,5 +256,22 @@ MODAL BOX css
   }
   .sidebar h1 {
     display: none;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .square {
+    min-height: 35px;
+    min-width: 35px;
+  }
+  .container {
+    width: 420px;
+    grid-template-columns: repeat(auto-fit, minmax(35px, 1fr));
+  }
+  #modal-textbox {
+    width: 350px;
+  }
+  h1 {
+    font-size: 20px;
   }
 }
