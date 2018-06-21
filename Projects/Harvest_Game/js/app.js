@@ -22,7 +22,7 @@ $(() => {
 
   // Check players' current score and determine a winner
   const pointCheck = () => {
-    const win = 3;
+    const win = 10;
     switch (true) {
       case (playerPoints[0] >= win && playerPoints[1] < win):
         openModal();
