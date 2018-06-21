@@ -42,10 +42,6 @@ body {
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.4);
 }
 
-.win {
-  display: none;
-}
-
 h1.title {
   text-transform: uppercase;
   font-family: 'myFont', sans-serif;
@@ -101,6 +97,37 @@ h1.title {
   color: white;
 }
 
+.water-button:hover {
+  outline: 2px solid gold;
+  outline-offset: -4px;
+  color: gold;
+}
+
+.extras button {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 10px 20px 15px;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  cursor: pointer;
+  text-align: center;
+  font-family: 'myFont', sans-serif;
+  text-transform: uppercase;
+  background-color: slategray;
+  color: white;
+}
+
+.extras button:hover {
+  outline: 2px solid gold;
+  outline-offset: -4px;
+  color: gold;
+}
+
+.win strong {
+  background-color: transparent !important;
+}
+
 .square {
   min-height: 50px;
   min-width: 50px;
@@ -152,4 +179,75 @@ h1.title {
 .two {
   background-color: rgba(255, 51, 51, 0.3);
   color: rgba(255, 51, 51, 1);
+}
+
+/***************************
+MODAL BOX css
+*************************/
+
+#modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#modal-textbox {
+  text-transform: uppercase;
+  background-color: rgba(102, 51, 0, 0.9);
+  outline: 2px solid gold;
+  outline-offset: -4px;
+  width: 550px;
+  color: white;
+  border-radius: 2px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  padding: 2%;
+  font-family: "myFont", serif;
+  text-align: center;
+}
+
+.modal-buttons {
+  text-transform: uppercase;
+  margin: 20px 0;
+  padding: 10px 20px 15px;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  background-color: gold;
+  font-family: 'myFont';
+  cursor: pointer;
+}
+
+.odal-buttons:hover {
+  outline: 2px solid white;
+  outline-offset: -4px;
+  color: white;
+}
+
+#modal-footer {
+  text-align: center;
+}
+
+@media only screen and (max-width: 900px) {
+  .content {
+    flex-direction: column-reverse;
+  }
+  .sidebar {
+    min-width: 200px;
+    padding: 20px;
+    margin: 20px 0 0 0;
+  }
+  .sidebar .info {
+    margin: 0;
+  }
+  .sidebar h1 {
+    display: none;
+  }
 }

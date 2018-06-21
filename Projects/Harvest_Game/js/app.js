@@ -5,30 +5,43 @@ $(() => {
   let player = ['one', 'two'];
   let playerPoints = [0, 0];
   const $currentPlayer = $('.player > td')
-  const $button = $('button');
+  const $button = $('.water-button');
+  const $modal = $('#modal');
+  const $closeBtn = $('#close');
 
   // Event Handlers
-  // Check players' current score
+
+  // open/close modal box
+  const openModal = () => {
+    $modal.css('display', 'flex');
+  }
+
+  const closeModal = () => {
+    $modal.css('display', 'none');
+  }
+
+  // Check players' current score and determine a winner
   const pointCheck = () => {
-    const win = 10;
+    const win = 3;
     switch (true) {
       case (playerPoints[0] >= win && playerPoints[1] < win):
-        $('.win').css('display', 'block');
-        $('.win strong').text('Player One');
+        openModal();
+        $('.win strong').text('Player One').addClass('one');
         break;
 
       case (playerPoints[1] >= win && playerPoints[0] < win):
-        $('.win').css('display', 'block');
-        $('.win strong').text('Player Two')
+        openModal();
+        $('.win strong').text('Player Two').addClass('two');
         break;
 
       case (playerPoints[0] >= win && playerPoints[1] >= win):
-        $('.win').css('display', 'block');
+        openModal();
         $('.win h1').text("It's a Draw!");
         break;
     }
   }
-  // Rotate players per action
+
+  // Rotate players and update sidebar
   const rotatePlayer = () => {
     tempPlayer = player.shift(1);
     player.push(tempPlayer);
@@ -53,7 +66,7 @@ $(() => {
     removeWeeds(event);
   }
 
-  // get position of event
+  // get index of event.target
   const getIndex = (e) => {
     let parent = e.parentElement;
     for (let i = 0; i < parent.children.length; i++) {
@@ -62,7 +75,8 @@ $(() => {
       }
     }
   }
-  // selects elements in a 4-square box and changes plants to grown plants if plant exists
+
+  // selects elements in a 4-square box and changes plants to grownPlant if plant exists
   const growPlant = (event) => {
     const multiTarget = [
       $square.eq(getIndex(event.target)), $square.eq(getIndex((event.target)) + 1),
@@ -116,6 +130,7 @@ $(() => {
       $container.append($div);
     }
   }
+
   // randomly generate weeds on the field
   const generateWeeds = () => {
     for (let i = 0; i < 56; i++) {
@@ -125,8 +140,10 @@ $(() => {
 
   makeField();
   generateWeeds();
-  // Event Listeners
   const $square = $('.square');
+
+  // Event Listeners
   $square.on('click', plant);
   $button.on('click', waterPlant);
+  $closeBtn.on('click', closeModal);
 });
