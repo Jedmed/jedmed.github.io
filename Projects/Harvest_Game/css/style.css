@@ -67,15 +67,18 @@ h1.title {
   text-transform: uppercase;
   font-family: 'myFont', sans-serif;
   color: white;
-  width: 90%;
+  width: 100%;
   text-align: left;
 }
 
-.sidebar .player td,
-.sidebar .score td {
+.sidebar .player th, .sidebar .score th {
   background-color: transparent !important;
-  margin-left: 10px;
   font-weight: bold;
+}
+
+.sidebar .player td, .sidebar .score td {
+  background-color: transparent !important;
+  text-align: right;
 }
 
 .sidebar p {
@@ -84,7 +87,8 @@ h1.title {
 }
 
 .water-button {
-  margin-top: 20px;
+  display: block;
+  margin: 40px auto 0;
   padding: 10px 20px 15px;
   border: none;
   outline: none;
