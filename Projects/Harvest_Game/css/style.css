@@ -115,6 +115,10 @@ body {
   color: white;
 }
 
+.extras button#restart {
+  background-color: red;
+}
+
 .extras button:hover {
   outline: 2px solid gold;
   outline-offset: -4px;
