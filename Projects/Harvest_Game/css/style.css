@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "myFont";
+  src: url("CW_BITMP.ttf") format('truetype');
+}
+
 body {
   margin: 0;
 }
