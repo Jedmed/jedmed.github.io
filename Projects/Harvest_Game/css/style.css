@@ -1,6 +1,6 @@
 @font-face {
   font-family: "myFont";
-  src: url("CW_BITMP.ttf") format('truetype');
+  src: url("CW_BITMP.TTF") format('truetype');
 }
 
 body {
