@@ -379,6 +379,7 @@ Responsive Design
   }
   .sidebar .info {
     margin: 0;
+    width: 80%;
   }
   .title-main {
     display: none;
