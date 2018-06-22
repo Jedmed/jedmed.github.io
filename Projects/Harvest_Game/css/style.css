@@ -376,10 +376,12 @@ Responsive Design
   .water-button {
     margin: 0;
     margin-left: 20px;
+    flex: 1;
   }
   .sidebar .info {
     margin: 0;
-    width: 80%;
+    flex: 3;
+    width: auto;
   }
   .title-main {
     display: none;
