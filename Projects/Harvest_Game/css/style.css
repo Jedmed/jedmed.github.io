@@ -358,14 +358,24 @@ Responsive Design
   html, body {
     overflow: hidden;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
   }
   .content {
     flex-direction: column-reverse;
+    height: initial;
   }
   .sidebar {
+    display: flex;
     min-width: 60%;
     padding: 20px;
     margin: 20px 0 0 0;
+  }
+  .water-button {
+    margin: 0;
+    margin-left: 20px;
   }
   .sidebar .info {
     margin: 0;
@@ -375,6 +385,7 @@ Responsive Design
   }
   .title-mobile {
     display: block;
+    position: relative;
   }
   .extras {
     display: none;
@@ -389,9 +400,6 @@ Responsive Design
   .square {
     min-height: 30px;
     min-width: 30px;
-  }
-  .title-mobile {
-    top: 0;
   }
   .sidebar {
     width: 80%;
