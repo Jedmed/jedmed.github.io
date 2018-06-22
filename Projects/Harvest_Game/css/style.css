@@ -294,7 +294,7 @@ MODAL BOX css
 }
 
 .how-to-play>#modal-textbox {
-  width: 700px;
+  width: 750px;
   padding: 1% 2%;
 }
 
@@ -363,17 +363,12 @@ Responsive Design
     flex-direction: column-reverse;
   }
   .sidebar {
-    display: flex;
     min-width: 60%;
     padding: 20px;
     margin: 20px 0 0 0;
   }
   .sidebar .info {
     margin: 0;
-  }
-  .water-button {
-    margin: 0;
-    margin-left: 40px;
   }
   .title-main {
     display: none;
@@ -396,7 +391,7 @@ Responsive Design
     min-width: 30px;
   }
   .title-mobile {
-    top: 10%;
+    top: 50px;
   }
   .sidebar {
     width: 80%;
