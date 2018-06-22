@@ -9,12 +9,17 @@
 </head>
 
 <body>
+  <div class="title-mobile title-start">
+      <h1>Harvest Game</h1>
+  </div>
+  <div class="start">
+    <h1>Choose Your Mode:</h1>
+    <button class="single">Single Player</button>
+    <button class="vs-player">Player VS Player</button>
+  </div>
   <div class="title-main">
     <h1 data-shadow='Harvest'>Harvest</h1>
     <h1 data-shadow='Game'>Game</h1>
-  </div>
-  <div class="title-mobile">
-      <h1>Harvest Game</h1>
   </div>
   <div class="background-image"></div>
   <div class="win" id="modal">
@@ -34,7 +39,23 @@
       <ul>
         <li><strong>Plant a Seed:</strong>Click on an empty field to plant a seed</li>
         <li><strong>Remove Weeds:</strong>A seed can not be planted on an area with weeds, click on a weed to remove it</li>
-        <li><strong>Water Plants:</strong>A seed needs water in order to grow into a plant, select the WATER PLANT and splash your water over an area in order for the seeds to grow! You immediately get points for any plant<br /><strong>WARNING! Watering seeds will grow plants for both players!</strong></li>
+        <li><strong>Water Plants:</strong>A seed needs water in order to grow into a plant, select the WATER PLANT and splash your water over an area in order for the seeds to grow! You immediately get points for any watered plant <strong>WARNING! Watering seeds will grow plants for both players!</strong></li>
+      </ul>
+      <div id="modal-footer">
+        <button class="modal-buttons" id="close">Close</button>
+      </div>
+    </div>
+  </div>
+  <div class="how-to-play-single" id="modal">
+    <div id="modal-textbox">
+      <h1>How to Play</h1>
+      <p>The player has to plant, water and harvest their crops as fast as they can before the field is overridden with weeds. Every turn a weed is randomly grown on an empty field. Each harvested crop is worth 1 point. <strong>See how many points you can get before the field is overridden!</strong></p>
+      <h1>What Can I Do?</h1>
+      <p>Each player may only take one action on their turn:</p>
+      <ul>
+        <li><strong>Plant a Seed:</strong>Click on an empty field to plant a seed</li>
+        <li><strong>Remove Weeds:</strong>A seed can not be planted on an area with weeds, click on a weed to remove it</li>
+        <li><strong>Water Plants:</strong>A seed needs water in order to grow into a plant, select the WATER PLANT and splash your water over an area in order for the seeds to grow! You immediately get points for any waterd plant</li>
       </ul>
       <div id="modal-footer">
         <button class="modal-buttons" id="close">Close</button>
@@ -72,5 +93,5 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="js/app.js" charset="utf-8"></script>
-
+<script src="js/app-sp.js" charset="utf-8"></script>
 </html>

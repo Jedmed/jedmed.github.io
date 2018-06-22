@@ -8,6 +8,48 @@ body {
   overflow: hidden;
 }
 
+.start {
+  z-index: 4;
+  background-color: rgba(102, 51, 0, 0.9);
+  padding: 10px 40px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  font-family: 'myFont', sans-serif;
+  color: white;
+  text-align: center;
+  outline: 2px solid gold;
+  outline-offset: -4px;
+}
+
+.start button {
+  display: block;
+  margin: 30px auto;
+  padding: 10px 30px 20px;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 20px;
+  font-family: 'myFont', sans-serif;
+  text-transform: uppercase;
+  background-color: gold;
+  color: rgba(102, 51, 0, 1);
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.4);
+}
+
+.single:hover, .vs-player:hover {
+  background-color: rgba(0, 128, 255, 1);
+  outline: 2px solid gold;
+  outline-offset: -4px;
+  color: gold;
+}
+
 .background-image {
   position: fixed;
   top: 0;
@@ -25,7 +67,7 @@ body {
 }
 
 .content {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -185,8 +227,8 @@ body {
 .walking-chicken {
   background: url(../images/walkingchicken.gif) no-repeat;
   background-size: cover;
-  position: absolute;
-  animation: walkingChicken 60s linear;
+  position: fixed;
+  animation: walkingChicken 60s linear 5;
   left: -100px;
   bottom: 0;
   width: 100px;
@@ -293,8 +335,8 @@ MODAL BOX css
   overflow: hidden;
 }
 
-.how-to-play>#modal-textbox {
-  width: 750px;
+.how-to-play>#modal-textbox, .how-to-play-single>#modal-textbox {
+  width: 770px;
   padding: 1% 2%;
 }
 
@@ -363,6 +405,10 @@ Responsive Design
     justify-content: center;
     height: 100%;
   }
+  .title-start.title-mobile {
+    position: fixed;
+    top: 50px;
+  }
   .content {
     flex-direction: column-reverse;
     height: initial;
@@ -400,6 +446,9 @@ Responsive Design
 }
 
 @media screen and (max-width: 650px) {
+  .start {
+    width: 60%;
+  }
   .square {
     min-height: 30px;
     min-width: 30px;
