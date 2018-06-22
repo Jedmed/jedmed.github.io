@@ -391,7 +391,7 @@ Responsive Design
     min-width: 30px;
   }
   .title-mobile {
-    top: 50px;
+    top: 0;
   }
   .sidebar {
     width: 80%;
