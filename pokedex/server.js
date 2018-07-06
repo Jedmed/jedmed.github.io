@@ -3,8 +3,9 @@ const app = express();
 const pokemon = require('./models/pokemon.js');
 const methodOverride = require('method-override');
 
+
 // Port
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Middleware Body Parser
 app.use(methodOverride('_method'));
@@ -97,6 +98,4 @@ app.delete('/pokedex/:index', (req, res) => {
 });
 
 // Port Listener
-app.listen(port, () => {
-  console.log('Listening for Pokemon on ' + port);
-});
+app.listen(port);
