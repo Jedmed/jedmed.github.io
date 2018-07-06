@@ -11,7 +11,7 @@
     <h3>Future Features (Achieved)</h3>
     <p>I would like to work on a Single Player mode where the player would have to plant, water and harvest as many crops as they can before their field gets overridden with weeds that are being continuously being generated.</p>
   </li>
-  <li><h2><a href="/pokedex">Pokedex</a></h2>
+  <li><h2><a href="https://protected-tor-29059.herokuapp.com/pokedex/">Pokedex</a></h2>
     
   </li>
 </ul>
