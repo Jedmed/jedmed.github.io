@@ -11,16 +11,28 @@
     <h3>Future Features (Achieved)</h3>
     <p>I would like to work on a Single Player mode where the player would have to plant, water and harvest as many crops as they can before their field gets overridden with weeds that are being continuously being generated.</p>
   </li>
+  
   <li><h2><a href="https://protected-tor-29059.herokuapp.com/pokedex/">Pokedex</a></h2>
     <h3>Summary</h3>
-  <p>An Express Application displaying the data on all 151 original Pokemons</p>
+  <p>An Express Application displaying the data of all the 151 original Pokemons</p>
     <h3>How it was built</h3>
-    <p></p>
+    <p>The Pokedex is built as a CRUD Application in Express.js. It has all 7 RESTful Routes and you can modify the data as you please. The Pokedex does not have a Database connected to it and will reset upon cache emptying.</p>
     <h3>Challenges</h3>
-    <p></p>
-    <p></p>
-    <h3>Future Features (Achieved)</h3>
-    <p></p>
+    <p>Creating a Schema that would house the stats of each Pokemon proved tough and required some creativity.</p>
+  </li>
+  
+  <li><h2><a href="https://didd-shop.herokuapp.com/shop">DIDD (E-Commerce Concept Store)</a></h2>
+    <h3>Summary</h3>
+  <p>An Online Fashion Shop built in Express using Mongo Database.</p>
+    <h3>How it was built</h3>
+    <p>DIDD is built as a CRUD Application in Express.js. It has all 7 RESTful Routes and 5 Controllers including a Login and Admin System. The Shopping Cart was written from scratch and uses its own model.</p>
+    <h3>Challenges</h3>
+    <p>Creating a Schema that would house the stats of each Pokemon proved tough and required some creativity.</p>
+    <h3>Future Features</h3>
+    <p>A User Account area for users to change their account details.</p>
+  <p>A Checkout feature where users can checkout with their shopping cart</p>
+  <p>The ability to alter Shopping Cart product quantities</p>
+  <p>The ability to select what size clothing to purchase</p>
   </li>
 </ul>
 
