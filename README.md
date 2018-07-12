@@ -27,7 +27,8 @@
     <h3>How it was built</h3>
     <p>DIDD is built as a CRUD Application in Express.js. It has all 7 RESTful Routes and 5 Controllers including a Login and Admin System. The Shopping Cart was written from scratch and uses its own model.</p>
     <h3>Challenges</h3>
-    <p>Creating a Schema that would house the stats of each Pokemon proved tough and required some creativity.</p>
+    <p>I wanted to set up multiple controllers for various purposes and found it hard to control which routes existed with each controller and what session to parse. I also wanted to make sure that users would not be able to access areas they weren't allowed or try to go to pages that did not exist.  This required a lot of loss-ends tying and making sure that every scenario was accounted for.</p>
+  <p>Another challenge that I encountered was learning to build a Shopping Cart from scratch. The Cart was no ordinary Schema and I had to improvise ways of storing the necessary item in an array and calling the item when needed</p>
     <h3>Future Features</h3>
     <p>A User Account area for users to change their account details.</p>
   <p>A Checkout feature where users can checkout with their shopping cart</p>
