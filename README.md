@@ -35,6 +35,15 @@
   <p>The ability to alter Shopping Cart product quantities</p>
   <p>The ability to select what size clothing to purchase</p>
   </li>
+  
+  <li><h2><a href="https://peaceful-ocean-64726.herokuapp.com/">Online Blog</a></h2>
+    <h3>Summary</h3>
+  <p>The Online Blog is an open blogging site where any user can post a blog anonymously. The user can also create an account in order to delete and edit blogs. This was my first introduction into Angular.js and the use of AJAX to create a website.</p>
+    <h3>Built With:</h3>
+    <p>Javascript, Angular.js Node.js, MongoDB, Mongoose, Express, Bootstrap, HTML/CSS</p>
+    <h3>Challenges</h3>
+    <p>I wanted only the logged in Users to be able to edit and delete Blog Posts so I had to write the update and delete routes in a way that was only accessible to a user-session.</p>
+  </li>
 </ul>
 
 # Mini-Projects
